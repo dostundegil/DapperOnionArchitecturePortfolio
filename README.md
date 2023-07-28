@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-#  Portfolio - .NET CORE TRAVEL PROJECT :+1:
+#  Portfolio - .NET CORE PROJECT :+1:
 
 A simple portfolio website that I created to reinforce my knowledge of Dapper and onion architecture.
 
