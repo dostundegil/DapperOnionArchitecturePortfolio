@@ -1,0 +1,36 @@
+﻿@model Dapper.Portfolio.Application.Dtos.SkillDto
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y mt-4">
+    <div class="card mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center bg-primary">
+            <h5 class="mb-0  text-white">Yetenek Güncelle</h5>
+        </div>
+        <div class="card-body mt-2">
+            <form method="post">
+                <input type="hidden" asp-for="SkillID"/>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-company">Yetenek Adı</label>
+                            <input type="text" asp-for="SkillTitle" class="form-control" id="basic-default-company" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-fullname">Yetenek Oranı %</label>
+                            <input type="text" asp-for="SkillRate" class="form-control" id="basic-default-fullname" />
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary"><span class="tf-icons bx bx-refresh"></span> Güncelle</button>
+                <a href="/AdminSkill/Index/" class="btn btn-danger"><span class="tf-icons bx bx-arrow-back"></span> Vazgeç </a>
+            </form>
+        </div>
+    </div>
+</div>
+

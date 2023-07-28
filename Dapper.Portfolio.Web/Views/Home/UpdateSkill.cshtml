@@ -1,0 +1,17 @@
+﻿@model Dapper.Portfolio.Application.Dtos.SkillDto
+@{
+    ViewData["Title"] = "UpdateSkill";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="SkillID"/>
+    <label>ad</label>
+    <input asp-for="SkillTitle" />
+    <br />
+    <label>rate</label>
+    <input asp-for="SkillRate" />
+    <br />
+    <button type="submit">Yolla</button>
+</form>
+
+

@@ -1,0 +1,28 @@
+﻿@model List<Dapper.Portfolio.Application.Dtos.SkillDto>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>başlık</th>
+            <th>İşlemler</th>
+        </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SkillTitle</td>
+            <td> <a class="btn btn-success" asp-controller="Home" asp-route-id="@item.SkillID" asp-action="UpdateSkill">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+
+
+
+<a class="btn btn-success" asp-controller="Home" asp-action="AddSkill"></a>

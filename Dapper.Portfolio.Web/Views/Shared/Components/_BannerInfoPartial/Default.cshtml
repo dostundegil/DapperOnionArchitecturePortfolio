@@ -1,0 +1,29 @@
+﻿@model List<Dapper.Portfolio.Application.Dtos.InfoDto>
+
+
+@foreach (var item in Model)
+{
+    <div id="home" class="banner-w3pvt d-flex">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 bnr-txt-w3pvt">
+                    <div class="bnr-w3pvt-txt mt-sm-5">
+                        <h6>Portfolyoma hoşgeldiniz</h6>
+                        <h2>Merhaba <span>ben @item.InfoTitle</span></h2>
+                        <h4>@item.InfoJob</h4>
+                        <p class="mt-4">
+                            @item.InfoDescription
+                        </p>
+                        <ul class="social_section_1info mt-4">
+                            <li class="mb-2 twitter"><a href="@item.InfoTwitter"><span class="fa fa-twitter"></span></a></li>
+                            <li class="mb-2 instagram"><a href="@item.InfoInstagram"><span class="fa fa-instagram"></span></a></li>
+                            <li class="linkedin"><a href="@item.InfoLinkedIn"><span class="fa fa-linkedin"></span></a></li>
+                        </ul>
+                        <a href="#about" class="scroll bnr-btn mr-2">Daha Fazla Oku </a>
+                        <a href="#contact" class="scroll bnr-btn1">İletişim </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

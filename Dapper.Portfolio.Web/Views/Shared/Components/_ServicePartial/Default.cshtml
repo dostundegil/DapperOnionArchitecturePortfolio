@@ -1,0 +1,27 @@
+﻿@model List<Dapper.Portfolio.Application.Dtos.ServiceDto>
+@{
+int count=0;
+}
+
+<section class="services pt-5" id="services">
+	<div class="container py-lg-5">
+		<p class="paragraph">Sizin İçin Ne Yapabilirim</p>
+		<h3 class="heading mb-sm-5 mb-4">Servislerim</h3>
+		<div class="row">
+			@foreach (var item in Model)
+			{
+				count++;
+			<div class="col-lg-3 col-sm-6 mb-5">
+				<div class="panel panel-default">
+					<div class="panel-thumbnail">
+						<img src="@item.ServiceIcon" alt="" class="img-fluid" />
+						<h3>@count</h3>
+						<h4 class="mt-3">@item.ServiceTitle</h4>
+						<p class="mt-3">@item.ServiceDescription</p>
+					</div>
+				</div>
+			</div>
+			}
+		</div>
+	</div>
+</section>
